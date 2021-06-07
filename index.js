@@ -8,6 +8,8 @@ var cors = require('cors')
 const path = require('path');
 const User = require('./model/user')
 
+var PORT = process.env.PORT || 5000;
+
 const app = express();
 
 app.use(cors());
@@ -138,4 +140,4 @@ app.post('/send', (req, res)=>{
         });
 
 
-app.listen(5000, ()=> console.log("server started"));
+app.listen(PORT, ()=> console.log("server started"));
